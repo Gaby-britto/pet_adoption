@@ -22,7 +22,7 @@ class card_animals extends StatelessWidget {
         
         ClipRRect(
           borderRadius: BorderRadius.circular(
-              20), // Altere o valor para ajustar o arredondamento
+              20), 
           child: Image.asset(
             imagePath,
             height: 200,
