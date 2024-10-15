@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:pet_adopt/view/home.dart';
-import 'package:pet_adopt/widgets/card_form.dart';
+import 'package:pet_adopt/widgets/card_formPet.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class RegisterPetPage extends StatefulWidget {
+  const RegisterPetPage({super.key});
+     
 
 
   @override
-  State<LoginPage> createState() => _MyHomePageState();
+  State<RegisterPetPage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<LoginPage> {
+class _MyHomePageState extends State<RegisterPetPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,8 +32,8 @@ class _MyHomePageState extends State<LoginPage> {
                   Positioned(
                     top: 30,
                     child: Image.asset(
-                      'assets/images/image_login.png',
-                      height: 500,
+                      'assets/images/register_pet.png',
+                      height: 300,
                     ),
                   ),
                 ],
@@ -53,7 +54,7 @@ class _MyHomePageState extends State<LoginPage> {
                   SizedBox(height: 11),
                   Center(
                     child: Text(
-                      "Access",
+                      "Register a Pet",
                       style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
@@ -62,7 +63,7 @@ class _MyHomePageState extends State<LoginPage> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  CustomForm(),
+                 PetRegister(),
                   SizedBox(height: 20),
                   Center(
                     child: Padding(
@@ -82,7 +83,7 @@ class _MyHomePageState extends State<LoginPage> {
                             );
                           },
                           child: const Text(
-                            "Login",
+                            "Register",
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
@@ -98,4 +99,3 @@ class _MyHomePageState extends State<LoginPage> {
     );
   }
 }
-

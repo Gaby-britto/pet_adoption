@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adopt/view/login.dart'; // Verifique se o caminho está correto
+import 'package:pet_adopt/view/login.dart';
+import 'package:pet_adopt/widgets/card_form.dart'; 
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
+   
+  const MyHomePage({super.key});
+
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -93,34 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextField(
-                      decoration: const InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Enter your name',
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextField(
-                      decoration: const InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Enter your email',
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextField(
-                      decoration: const InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Enter your phone',
-                      ),
-                      keyboardType: TextInputType.phone,
-                    ),
-                  ),
+                 CustomForm(),
                   SizedBox(height: 20),
                   Center(
                     child: Padding(
@@ -135,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => LoginPage(title: '',), // Use LoginPage
+                                builder: (context) => LoginPage(), // Use LoginPage
                               ),
                             );
                           },

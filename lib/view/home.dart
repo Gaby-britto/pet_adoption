@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_adopt/view/information.dart';
 import 'package:pet_adopt/widgets/card_animals.dart';
 import 'package:pet_adopt/widgets/card_donate.dart';
 import 'package:pet_adopt/widgets/card_option.dart';
@@ -8,7 +9,6 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     final List<Map<String, String>> animals = [
       {
         'name': 'Bello',
@@ -91,20 +91,14 @@ class Home extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  CardOption(
-                      text: 'Dogs', imagePath: 'assets/images/dog_card.jpg'),
+                  CardOption( text: 'Dogs', imagePath: 'assets/images/dog_card.jpg'),
                   SizedBox(width: 10),
-                  CardOption(
-                      text: 'Cats', imagePath: 'assets/images/cat_card.jpg'),
+                  CardOption(text: 'Cats', imagePath: 'assets/images/cat_card.jpg'),
                   SizedBox(width: 10),
-                  CardOption(
-                      text: 'Ferrets',
-                      imagePath: 'assets/images/furao_card.jpg'),
+                  CardOption(text: 'Ferrets', imagePath: 'assets/images/furao_card.jpg'),
                 ],
               ),
               SizedBox(height: 20),
-
-      
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: GridView.builder(
@@ -116,13 +110,23 @@ class Home extends StatelessWidget {
                     mainAxisSpacing: 10,
                     childAspectRatio: 0.7,
                   ),
-                  itemCount: animals.length, 
+                  itemCount: animals.length,
                   itemBuilder: (context, index) {
-                    return card_animals(
-                      name: animals[index]['name']!,
-                      age: animals[index]['age']!,
-                      km: animals[index]['km']!,
-                      imagePath: animals[index]['imagePath']!,
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => PetProfileApp(),
+                          ),
+                        );
+                      },
+                      child: card_animals(
+                        name: animals[index]['name']!,
+                        age: animals[index]['age']!,
+                        km: animals[index]['km']!,
+                        imagePath: animals[index]['imagePath']!,
+                      ),
                     );
                   },
                 ),

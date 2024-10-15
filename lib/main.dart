@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pet_adopt/view/home.dart';
+import 'package:pet_adopt/view/information.dart';
 import 'package:pet_adopt/view/register.dart';
 import 'package:pet_adopt/view/login.dart';
 
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home:  MyHomePage(),
     );
   }
 }

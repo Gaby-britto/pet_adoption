@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_adopt/view/register_pet.dart';
 
 class card_donate extends StatelessWidget {
   const card_donate({
@@ -42,7 +43,12 @@ class card_donate extends StatelessWidget {
                   SizedBox(height: 10),
                   ElevatedButton(
                     onPressed: () {
-                      // Ação do botão
+                       Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const RegisterPetPage(),
+                              ),
+                            );
                     },
                     child: Text('Donate Now'),
                   ),
