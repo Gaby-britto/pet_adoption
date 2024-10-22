@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pet_adopt/view/information.dart';
-import 'package:pet_adopt/widgets/header.dart';
 import 'package:pet_adopt/widgets/card_animals.dart';
 
 class FavoritesPage extends StatelessWidget {
@@ -33,13 +32,27 @@ class FavoritesPage extends StatelessWidget {
         'km': '3 km away',
         'imagePath': 'assets/images/card_cat.png',
       },
+       {
+        'name': 'Bello',
+        'age': '9 Months old |',
+        'km': '1 km away',
+        'imagePath': 'assets/images/gato_persa.png',
+      },
+      {
+        'name': 'Lara',
+        'age': '3 Months old |',
+        'km': '2 km away',
+        'imagePath': 'assets/images/card_furao.png',
+      },
     ];
 
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Favorites pets"),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
           children: [
-            const Header(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: GridView.builder(
@@ -58,8 +71,7 @@ class FavoritesPage extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>
-                              InformationPage(), 
+                          builder: (context) => InformationPage(),
                         ),
                       );
                     },
