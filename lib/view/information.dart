@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pet_adopt/view/home.dart';
 import 'package:pet_adopt/widgets/profile_screen.dart';
 
-void main() {
-  runApp(PetProfileApp());
-}
-
-class PetProfileApp extends StatelessWidget {
+class InformationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_adopt/view/favorites.dart';
 
 class UserPage extends StatelessWidget {
   const UserPage({super.key});
@@ -49,7 +50,13 @@ class UserPage extends StatelessWidget {
                     backgroundColor: Color(0xFFb19cd9),
                   ),
                   onPressed: () {
-                    print('Favorites');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const FavoritesPage(),
+                      ),
+                    );
+                    ('Favorites');
                   },
                   child: Text(
                     'Favorites',

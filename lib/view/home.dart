@@ -88,7 +88,7 @@ class Home extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => PetProfileApp(),
+                            builder: (context) => InformationPage(),
                           ),
                         );
                       },

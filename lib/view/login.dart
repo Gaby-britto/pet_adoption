@@ -5,7 +5,6 @@ import 'package:pet_adopt/widgets/card_form.dart';
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
-
   @override
   State<LoginPage> createState() => _MyHomePageState();
 }
@@ -98,4 +97,3 @@ class _MyHomePageState extends State<LoginPage> {
     );
   }
 }
-

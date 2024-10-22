@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:pet_adopt/view/login.dart';
-import 'package:pet_adopt/widgets/card_form.dart'; 
+import 'package:pet_adopt/widgets/card_form.dart';
 
-class MyHomePage extends StatefulWidget {
-   
-  const MyHomePage({super.key});
-
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<RegisterPage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -95,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                 CustomForm(),
+                  CustomForm(),
                   SizedBox(height: 20),
                   Center(
                     child: Padding(
@@ -110,7 +108,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => LoginPage(), // Use LoginPage
+                                builder: (context) =>
+                                    LoginPage(), // Use LoginPage
                               ),
                             );
                           },

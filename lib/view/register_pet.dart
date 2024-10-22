@@ -4,8 +4,6 @@ import 'package:pet_adopt/widgets/card_formPet.dart';
 
 class RegisterPetPage extends StatefulWidget {
   const RegisterPetPage({super.key});
-     
-
 
   @override
   State<RegisterPetPage> createState() => _MyHomePageState();
@@ -16,20 +14,19 @@ class _MyHomePageState extends State<RegisterPetPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-           backgroundColor: Colors.transparent,
-          elevation: 0,
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.black),
-            onPressed: (
-            ) {
-                 Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const Home(),
-                              ),
-                            );
-            },
-          ),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const Home(),
+              ),
+            );
+          },
+        ),
       ),
       resizeToAvoidBottomInset: false,
       backgroundColor: Color(0xFFb19cd9),
@@ -79,7 +76,7 @@ class _MyHomePageState extends State<RegisterPetPage> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                 PetRegister(),
+                  PetRegister(),
                   SizedBox(height: 20),
                   Center(
                     child: Padding(
