@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_adopt/view/home.dart';
 import 'package:pet_adopt/widgets/profile_screen.dart';
 
 void main() {
@@ -15,7 +16,14 @@ class PetProfileApp extends StatelessWidget {
           elevation: 0,
           leading: IconButton(
             icon: Icon(Icons.arrow_back, color: Colors.black),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const Home(),
+                ),
+              );
+            },
           ),
           actions: [
             IconButton(
@@ -29,4 +37,3 @@ class PetProfileApp extends StatelessWidget {
     );
   }
 }
-

@@ -3,6 +3,8 @@ import 'package:pet_adopt/view/information.dart';
 import 'package:pet_adopt/widgets/card_animals.dart';
 import 'package:pet_adopt/widgets/card_donate.dart';
 import 'package:pet_adopt/widgets/card_option.dart';
+import 'package:pet_adopt/widgets/header.dart';
+import 'package:pet_adopt/widgets/search.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -42,39 +44,8 @@ class Home extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Image.asset(
-                      'assets/images/menu.png',
-                      height: 25,
-                    ),
-                  ),
-                  SizedBox(width: 20),
-                  Text(
-                    'Welcome',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 24,
-                    ),
-                  ),
-                  SizedBox(width: 110),
-                  Image.asset(
-                    'assets/images/user.png',
-                    height: 120,
-                  ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Search',
-                    border: OutlineInputBorder(),
-                  ),
-                ),
-              ),
+              Header(),
+              Search(),
               card_donate(),
               SizedBox(height: 5),
               Padding(
@@ -138,3 +109,6 @@ class Home extends StatelessWidget {
     );
   }
 }
+
+
+
